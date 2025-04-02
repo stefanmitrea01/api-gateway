@@ -2,7 +2,7 @@
 
 return [
     'routes' => [
-        'api/v1/*' => 'https://jsonplaceholder.typicode.com/posts'
+        'api/v1/*' => 'https://jsonplaceholder.typicode.com'
     ],
     'logging' => [
         'enabled' => true,
