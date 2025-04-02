@@ -51,14 +51,16 @@ composer install
   MOCK_JWT_TOKEN=simulated-jwt-token-for-testing
   ```
 
-### 4. Generate Application Key
+### 4. Build and Start Containers
 ```bash
-php artisan key:generate
+docker-compose up -d --build
 ```
 
-### 5. Run Migrations
+### 5. Initialize Application
 ```bash
-php artisan migrate
+docker-compose exec app composer install
+docker-compose exec app php artisan key:generate
+docker-compose exec app php artisan migrate
 ```
 
 ### 6. Configure Downstream Service
